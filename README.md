@@ -27,7 +27,7 @@ And you should be ready to go!
 # WIP
 - Between guilds compatibility (each instance works with only one channel in one guild);
 - Permissions;
-- Polishing, tt is really, REALLY, **REALLY** slow.
+- Polishing, it is really, REALLY, **REALLY** slow.
 
 # Disclaimer
 This is a meme bot and it is barely coded well, so please, don't take it seriously.
