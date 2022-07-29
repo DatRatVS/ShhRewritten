@@ -1,16 +1,45 @@
 import discord
 import random
 import os
+import asyncio
 from discord.ext import commands
 from config.token import token
 
 intents = discord.Intents.default()
 intents.message_content = True
-bot = commands.Bot(command_prefix='=', intents=intents)
+bot = commands.Bot(command_prefix="=", intents=intents)
 
 liberado = True
 
 @bot.event
+async def on_ready():
+
+    activities = [
+      "calando boquinhas desde 21/02/2022",
+      "fica xiu mano, to te vendo",
+      "eu não quero conversar com você cara, some",
+      "puta que pariu que cara chato",
+      "https://bit.ly/36jQxzk",
+      "cope",
+      "ratio",
+      "didn\'t ask",
+      "cringe",
+      "you fell off",
+      "don\'t care",
+      "skill issue",
+      "cancelled",
+      "quote tweet",
+      "counter ratio",
+      "blocked",
+      "pinged owner",
+      "erration",
+      "cry about it"
+    ]
+    while True:
+        await bot.change_presence(status=discord.Status.idle, activity=discord.Game(random.choice(activities)))
+        await asyncio.sleep(6)
+
+@bot.listen()
 async def on_message(message):
 
     global liberado
