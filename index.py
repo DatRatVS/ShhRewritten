@@ -4,6 +4,8 @@ import os
 import asyncio
 from discord.ext import commands
 from config.token import token
+from config.strings import frases
+from config.strings import activities
 
 intents = discord.Intents.default()
 intents.message_content = True
@@ -13,28 +15,6 @@ liberado = True
 
 @bot.event
 async def on_ready():
-
-    activities = [
-      "calando boquinhas desde 21/02/2022",
-      "fica xiu mano, to te vendo",
-      "eu não quero conversar com você cara, some",
-      "puta que pariu que cara chato",
-      "https://bit.ly/36jQxzk",
-      "cope",
-      "ratio",
-      "didn\'t ask",
-      "cringe",
-      "you fell off",
-      "don\'t care",
-      "skill issue",
-      "cancelled",
-      "quote tweet",
-      "counter ratio",
-      "blocked",
-      "pinged owner",
-      "erration",
-      "cry about it"
-    ]
     while True:
         await bot.change_presence(status=discord.Status.idle, activity=discord.Game(random.choice(activities)))
         await asyncio.sleep(6)
@@ -85,51 +65,11 @@ async def on_message(message):
     if liberado == False and message.channel.id == int(channelConfig.read()):
         if message.author == bot.user:
             return
-        frases = [
-        "na minha epoca as pessoas não falavam, fica xiu",
-        "vai dar meia hora de bunda com o relógio parado",
-        "eu não quero conversar com você cara, some",
-        "você só fala mano meu deus",
-        "<https://bit.ly/36jQxzk>",
-        "minha vontade é encher a sua boca na porrada",
-        "CALA A BOCA PORRAAAAAAAAAAAAAAAAAAAAAAAAAA",
-        "mano, acho que tu ja percebeu que eu quero que tu cale a porra da boca",
-        "aooooo vai toma no cu google CALA A BOCA",
-        "VOCÊ NÃO PODE SE AJUDAR A CALAR A BOCA?",
-        "vai ser contratado pro vasco se continuar falando mlk, para logo",
-        "uiuiui, um sistema unificado pras universidades, CALA A PORRA DA BOCA NINGUEM LIGA",
-        "que corte de cabelo dahora mano, KKKKKKKKKKKKKKKKK AGORA TE CALA",
-        "deu até ânsia de tanto que tu fala mlk, fica xiu",
-        "mano tu parece o voyager 3, PARA, DE, FALAR",
-        "tu tem problema mlk só pode",
-        "kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk seu inútil, CALA A PORRA DA BOCA",
-        "pindamonhangabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
-        "🤫🤫🤫🤫🤫🤫🤫🤫",
-        "parou?",
-        "vai dormir caralho, tu tem que calar a porra da boca",
-        "paraaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
-        "meu deeeeeeeeeeeeeeeus vai arrumar algo pra fazer seu vagabundo inútil",
-        "porra de rolê cosmico caralho, kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk",
-        "vascoooooooooooooooo",
-        "neeeee noooooo neeeeee nooooooo",
-        "tu chega fede feijoada mano",
-        "fala mais algo pra tu ver ai, duvido",
-        "tenta dnv mano",
-        "hoje não kkkkkkkkkkkkkk",
-        "me manda um pix que eu te deixo falar",
-        "falou tudo mas falou nada",
-        "qual foi?",
-        "tá ratiando mlk, só cala a boca",
-        "pena é a nossa diferença de idade",
-        "n sai filho da puta",
-        "mastiga biscoito no meu ouvido mano, vai",
-        "esse vermelho tá mais pra rosa, só calar a boquinha",
-        "seu miserável (não desmerecendo sua história)",
-    ]
+
         await message.delete()
         await message.channel.send(f"{message.author.mention}, {random.choice(frases)}")
+        channelConfig.close()
 
-    channelConfig.close()
     return
 
 bot.run(token)
