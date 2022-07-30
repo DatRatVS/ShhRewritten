@@ -71,9 +71,9 @@ async def on_message(message):
             if message.author == bot.user:
                 return
 
-        await message.delete()
-        await message.channel.send(f"{message.author.mention}, {random.choice(frases)}")
-        channelConfig.close()
+            await message.delete()
+            await message.channel.send(f"{message.author.mention}, {random.choice(frases)}")
+            channelConfig.close()
 
     return
 
