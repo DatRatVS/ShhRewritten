@@ -7,6 +7,13 @@ The shh BOT is a Discord bot made in [discord.py](https://github.com/Rapptz/disc
 `setar canal (channel id)` - Sets the bot's functionality to this channel<p></p>
 `coloca eles no chinelo` - Starts doing it's thing<p></p>
 `para com isso` - Stop doing it's thing<p></p>
+Although, commands are customizable, if you're willing to customize them, head into `strings.py` and modificate them as you wish.<p></p>
+
+# Adding more messages
+
+Head into `strings.py`, and you may add, remove or modify them there.<p></p>
+As long as each piece of phrase has one comma (,) at the end, they should be fine to work with the bot.<p></p>
+You can do it with the bot's activities as well, do the same on the activities array instead.<p></p>
 
 # How to use it
 
@@ -26,7 +33,6 @@ And you should be ready to go!
 
 # WIP
 - Between guilds compatibility (each instance works with only one channel in one guild);
-- Permissions;
 - Polishing, it is really, REALLY, **REALLY** slow.
 
 # Disclaimer
