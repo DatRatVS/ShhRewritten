@@ -10,7 +10,7 @@ The shh BOT is a Discord bot made in [discord.py](https://github.com/Rapptz/disc
 
 # How to use it
 
-You'll have to clone this repository, and run `index.py` by yourself. Unfortunately, you'll have to modificate my ID on the code (i didn't code in administrator permissions yet), so you can use the bot.<p></p>
+You'll have to clone this repository, and run `index.py` by yourself. Unfortunately, you'll have to modificate the administrator ID in `administrator.py`, just go there, replace my ID with yours, and you should be ready to go.<p></p>
 After cloning this repository, head in `token.py.example`, fill in with the token of your bot, and rename the file to `token.py`, and after installing [discord.py](https://github.com/Rapptz/discord.py), you should be ready to start the bot.<p></p>
 With it running, set the channel using `setar canal (channel id)`<p></p>
 ![image](https://user-images.githubusercontent.com/49768896/181671070-3551a5d5-7e5a-4d2c-b186-ca5ece77cb17.png)<p></p>
