@@ -65,11 +65,11 @@ async def on_message(message):
             await message.channel.send("beleza chefia tá liberado")
             return
 
-    channelConfig = open("config/channel.txt","r")
-
-    if liberado == False and message.channel.id == int(channelConfig.read()):
-        if message.author == bot.user:
-            return
+    if liberado == False:
+        channelConfig = open("config/channel.txt","r")
+        if message.channel.id == int(channelConfig.read()):
+            if message.author == bot.user:
+                return
 
         await message.delete()
         await message.channel.send(f"{message.author.mention}, {random.choice(frases)}")
