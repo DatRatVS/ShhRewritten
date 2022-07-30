@@ -32,7 +32,7 @@ async def on_message(message):
     if message.content.lower().startswith(setChannelCommand):
 
         if message.content[len(setChannelCommand) + 1:].isnumeric() and bot.get_channel(int(message.content[len(setChannelCommand) + 1:])) != "None":
-            if not message.author.id == adminId:
+            if not message.author.id == int(adminId):
                 await message.channel.send("menó, tu nem adm é kkkkkkkkkkkkkkj some")
                 return
         else:
@@ -49,7 +49,7 @@ async def on_message(message):
 
     if message.content.lower().startswith(startCommand):
         if liberado:
-            if not message.author.id == adminId:
+            if not message.author.id == int(adminId):
                 await message.channel.send("menó, tu nem adm é kkkkkkkkkkkkkkj some")
                 return
             liberado = not liberado
@@ -58,7 +58,7 @@ async def on_message(message):
     
     if message.content.lower().startswith(stopCommand):
         if not liberado:
-            if not message.author.id == adminId:
+            if not message.author.id == int(adminId):
                 await message.channel.send("menó, tu nem adm é kkkkkkkkkkkkkkj some")
                 return
             liberado = True
@@ -73,6 +73,8 @@ async def on_message(message):
 
             await message.delete()
             await message.channel.send(f"{message.author.mention}, {random.choice(frases)}")
+            channelConfig.close()
+        else:
             channelConfig.close()
 
     return
