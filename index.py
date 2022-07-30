@@ -3,9 +3,14 @@ import random
 import os
 import asyncio
 from discord.ext import commands
+
 from config.token import token
+from config.administrator import adminId
 from config.strings import frases
 from config.strings import activities
+from config.strings import setChannelCommand
+from config.strings import startCommand
+from config.strings import stopCommand
 
 intents = discord.Intents.default()
 intents.message_content = True
@@ -24,10 +29,10 @@ async def on_message(message):
 
     global liberado
 
-    if message.content.lower().startswith("setar canal"):
+    if message.content.lower().startswith(setChannelCommand):
 
-        if message.content[12:].isnumeric() and bot.get_channel(int(message.content[12:])) != "None":
-            if not message.author.id == 290293141666267136:
+        if message.content[len(setChannelCommand) + 1:].isnumeric() and bot.get_channel(int(message.content[len(setChannelCommand) + 1:])) != "None":
+            if not message.author.id == adminId:
                 await message.channel.send("menó, tu nem adm é kkkkkkkkkkkkkkj some")
                 return
         else:
@@ -38,22 +43,22 @@ async def on_message(message):
             os.remove("config/channel.txt")
 
         channelConfig = open("config/channel.txt","a+")
-        channelConfig.write(message.content[12:])
+        channelConfig.write(message.content[len(setChannelCommand) + 1:])
         channelConfig.close()
-        await message.channel.send(f"setei o canal pro <#{message.content[12:]}>")
+        await message.channel.send(f"setei o canal pro <#{message.content[len(setChannelCommand) + 1:]}>")
 
-    if message.content.lower().startswith("coloca eles no chinelo"):
+    if message.content.lower().startswith(startCommand):
         if liberado:
-            if not message.author.id == 290293141666267136:
+            if not message.author.id == adminId:
                 await message.channel.send("menó, tu nem adm é kkkkkkkkkkkkkkj some")
                 return
             liberado = not liberado
             await message.channel.send("é pra já kkkkkkkkkk")
             return
     
-    if message.content.lower().startswith("para com isso"):
+    if message.content.lower().startswith(stopCommand):
         if not liberado:
-            if not message.author.id == 290293141666267136:
+            if not message.author.id == adminId:
                 await message.channel.send("menó, tu nem adm é kkkkkkkkkkkkkkj some")
                 return
             liberado = True
