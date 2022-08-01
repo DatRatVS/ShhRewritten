@@ -37,5 +37,5 @@ And you should be ready to go!
 - Polishing, it is really, REALLY, **REALLY** slow.
 
 # Disclaimer
-This is a meme bot and it is barely coded well, so please, don't take it seriously.
+This is a meme bot and it is barely coded well, so please, don't take it seriously.<p></p>
 And you probably saw that i love if statements.
