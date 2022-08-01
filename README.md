@@ -39,4 +39,4 @@ And you should be ready to go!
 
 # Disclaimer
 This is a meme bot and it is barely coded well, so please, don't take it seriously.
-And you probably 
+And you probably saw that i love if statements.
