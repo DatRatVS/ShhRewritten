@@ -4,9 +4,9 @@ The shh BOT is a Discord bot made in [discord.py](https://github.com/Rapptz/disc
 
 # Commands
 
-`setar canal (channel id)` - Sets the bot's functionality to this channel<p></p>
-`coloca eles no chinelo` - Starts doing it's thing<p></p>
-`para com isso` - Stop doing it's thing<p></p>
+`setar canal (channel id)` - Sets the bot's functionality to this channel.<p></p>
+`coloca eles no chinelo` - Starts doing it's thing.<p></p>
+`para com isso` - Stop doing it's thing.<p></p>
 Although, commands are customizable, if you're willing to customize them, head into `strings.py` and modificate them as you wish.<p></p>
 
 # Adding more messages
@@ -17,13 +17,14 @@ You can do it with the bot's activities as well, do the same on the activities a
 
 # How to use it
 
-You'll have to clone this repository, and run `index.py` by yourself. Unfortunately, you'll have to modificate the administrator ID in `administrator.py`, just go there, replace my ID with yours, and you should be ready to go.<p></p>
+You'll have to clone this repository, and run `index.py` by yourself.<p></p>
 After cloning this repository, head in `token.py.example`, fill in with the token of your bot, and rename the file to `token.py`, and after installing [discord.py](https://github.com/Rapptz/discord.py), you should be ready to start the bot.<p></p>
-With it running, set the channel using `setar canal (channel id)`<p></p>
+With it running, set the channel using `setar canal (channel id)`.<p></p>
+*Take a note: you will need to have the Manage Messages permission to use commands.*<p></p>
 ![image](https://user-images.githubusercontent.com/49768896/181671070-3551a5d5-7e5a-4d2c-b186-ca5ece77cb17.png)<p></p>
-Start it by using `coloca eles no chinelo`<p></p>
+Start it by using `coloca eles no chinelo`.<p></p>
 ![image](https://user-images.githubusercontent.com/49768896/181671569-9387e09d-b7f2-4d45-99f2-c0a77f50ce3d.png)<p></p>
-And stop it by using `para com isso`<p></p>
+And stop it by using `para com isso`.<p></p>
 ![image](https://user-images.githubusercontent.com/49768896/181671651-794bec1a-780a-4e79-8cae-2f4e09e73208.png)<p></p>
 
 And you should be ready to go!
@@ -38,3 +39,4 @@ And you should be ready to go!
 
 # Disclaimer
 This is a meme bot and it is barely coded well, so please, don't take it seriously.
+And you probably 
