@@ -34,7 +34,6 @@ And you should be ready to go!
 
 # WIP
 - Between guilds compatibility (each instance works with only one channel in one guild);
-- Multi id permission (as of right now, it only supports one user administrator to control the bot);
 - Polishing, it is really, REALLY, **REALLY** slow.
 
 # Disclaimer
