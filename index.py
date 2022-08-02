@@ -5,7 +5,6 @@ import asyncio
 from discord.ext import commands
 
 from config.token import token
-from config.administrator import adminId
 from config.strings import frases
 from config.strings import activities
 from config.strings import setChannelCommand
