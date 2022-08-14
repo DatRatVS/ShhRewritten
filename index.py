@@ -73,6 +73,12 @@ async def on_message(message):
             await message.channel.send("beleza chefia tá liberado")
             return
 
+    if message.content.lower().startswith("ping"):
+        if not message.author.guild_permissions.manage_messages:
+            return
+        await message.channel.send(f"pongue porra: {round(bot.latency * 1000)}ms")
+        return
+
     if liberado == False:
         if message.channel.id == channelCache:
             if message.author == bot.user:
