@@ -17,6 +17,13 @@ bot = commands.Bot(command_prefix="=", intents=intents)
 
 liberado = True
 
+if os.path.exists("config/channel.txt"):
+    channelConfig = open("config/channel.txt","r")
+    channelCache = int(channelConfig.read())
+    channelConfig.close()
+else:
+    channelCache = 1
+
 @bot.event
 async def on_ready():
     while True:
@@ -27,6 +34,7 @@ async def on_ready():
 async def on_message(message):
 
     global liberado
+    global channelCache
 
     if message.content.lower().startswith(setChannelCommand):
 
@@ -43,6 +51,7 @@ async def on_message(message):
 
         channelConfig = open("config/channel.txt","a+")
         channelConfig.write(message.content[len(setChannelCommand) + 1:])
+        channelCache = int(message.content[len(setChannelCommand) + 1:])
         channelConfig.close()
         await message.channel.send(f"setei o canal pro <#{message.content[len(setChannelCommand) + 1:]}>")
 
@@ -65,16 +74,12 @@ async def on_message(message):
             return
 
     if liberado == False:
-        channelConfig = open("config/channel.txt","r")
-        if message.channel.id == int(channelConfig.read()):
+        if message.channel.id == channelCache:
             if message.author == bot.user:
                 return
 
             await message.delete()
             await message.channel.send(f"{message.author.mention}, {random.choice(frases)}")
-            channelConfig.close()
-        else:
-            channelConfig.close()
 
     return
 
