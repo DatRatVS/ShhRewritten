@@ -65,3 +65,4 @@ activities = [
 setChannelCommand = "setar canal"
 startCommand = "coloca eles no chinelo"
 stopCommand = "para com isso"
+pingCommand = "ping"

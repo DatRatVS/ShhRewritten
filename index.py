@@ -10,6 +10,7 @@ from config.strings import activities
 from config.strings import setChannelCommand
 from config.strings import startCommand
 from config.strings import stopCommand
+from config.strings import pingCommand
 
 intents = discord.Intents.default()
 intents.message_content = True
@@ -73,7 +74,7 @@ async def on_message(message):
             await message.channel.send("beleza chefia tá liberado")
             return
 
-    if message.content.lower().startswith("ping"):
+    if message.content.lower().startswith(pingCommand):
         if not message.author.guild_permissions.manage_messages:
             return
         await message.channel.send(f"pongue porra: {round(bot.latency * 1000)}ms")
