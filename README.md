@@ -7,7 +7,9 @@ The shh BOT is a Discord bot made in [discord.py](https://github.com/Rapptz/disc
 `setar canal (channel id)` - Sets the bot's functionality to this channel.<p></p>
 `coloca eles no chinelo` - Starts doing it's thing.<p></p>
 `para com isso` - Stop doing it's thing.<p></p>
+`ping` - Shows the bot's latency to Discord.<p></p>
 Although, commands are customizable, if you're willing to customize them, head into `strings.py` and modificate them as you wish.<p></p>
+
 
 # Adding more messages
 
@@ -34,7 +36,6 @@ And you should be ready to go!
 
 # WIP
 - Between guilds compatibility (each instance works with only one channel in one guild);
-- Polishing, it is really, REALLY, **REALLY** slow.
 
 # Disclaimer
 This is a meme bot and it is barely coded well, so please, don't take it seriously.<p></p>
